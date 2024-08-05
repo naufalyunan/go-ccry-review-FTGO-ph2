@@ -18,12 +18,12 @@ func main() {
 	fmt.Printf("Enter an integer number: ")
 	num, err := reader.ReadString('\n')
 	if err != nil {
-		fmt.Println("Error reading input: %v", err)
+		fmt.Println("Error reading input")
 	}
 	num = strings.TrimSpace(num)
 	numInt, err := strconv.Atoi(num)
 	if err != nil {
-		fmt.Println("Invalid integer input, must be integer: %v", err)
+		fmt.Println("Invalid integer input, must be integer")
 	}
 
 	go func(num int) {
